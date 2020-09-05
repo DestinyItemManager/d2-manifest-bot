@@ -1,6 +1,7 @@
 # This workflow runs every five minutes to check for a new manifest
 name: Check for new manifest
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
 
