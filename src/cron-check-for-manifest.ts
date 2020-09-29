@@ -18,6 +18,7 @@ gistClient.setToken(process.env.GIST_TOKEN);
 (async () => {
   const manifestMetadata = await getDestinyManifest(httpClient);
 
+  const current = manifestMetadata.Response.version;
   const latest = await gistClient
     .getOneById(gistID)
     .then((response: any) => JSON.parse(response.files[filename].content));
@@ -27,14 +28,16 @@ gistClient.setToken(process.env.GIST_TOKEN);
     await gistClient.update(gistID, {
       files: {
         filename: {
-          content: JSON.stringify(manifestMetadata.Response.version),
+          content: JSON.stringify(current),
           filename: filename,
         },
       },
     });
     return; // done for now i guess
   }
-  if (latest === manifestMetadata.Response.version) {
+  console.log(`Latest: ${latest}`);
+  console.log(`Current: ${current}`);
+  if (latest === current) {
     // nothing changed. no updates needed.
     return;
   }
@@ -44,13 +47,13 @@ gistClient.setToken(process.env.GIST_TOKEN);
   await gistClient.update(gistID, {
     files: {
       filename: {
-        content: JSON.stringify(manifestMetadata.Response.version),
+        content: JSON.stringify(current),
         filename: filename,
       },
     },
   });
 
-  const buildMessage = `new manifest build - ${manifestMetadata.Response.version}`;
+  const buildMessage = `new manifest build - ${current}`;
 
   // if (!/^[.\w-]+$/.test(versionNumber)) { I AM NOT REALLY SURE THIS NEEDS DOING. }
 
@@ -69,7 +72,7 @@ gistClient.setToken(process.env.GIST_TOKEN);
         branch: 'master',
         config: {
           env: {
-            MANIFEST_VERSION: manifestMetadata.Response.version,
+            MANIFEST_VERSION: current,
           },
         },
       },
