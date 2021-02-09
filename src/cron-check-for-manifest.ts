@@ -4,7 +4,7 @@ import GistClient from 'gist-client';
 import btoa from 'btoa';
 import fetch from 'cross-fetch';
 import { getDestinyManifest } from 'bungie-api-ts/destiny2';
-import { generateHttpClient } from 'destiny2-manifest';
+import { generateHttpClient } from '@d2api/manifest';
 
 const httpClient = generateHttpClient(fetch, process.env.API_KEY);
 const filename = 'latest.json';
