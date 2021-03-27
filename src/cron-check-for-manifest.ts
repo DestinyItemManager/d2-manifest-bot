@@ -1,59 +1,38 @@
 #!/usr/bin/env node
 
-import GistClient from 'gist-client';
 import btoa from 'btoa';
 import fetch from 'cross-fetch';
 import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 import { generateHttpClient } from '@d2api/manifest';
+import latest from '../latest.json';
+import fse from 'fs-extra';
 
+const { writeFileSync } = fse;
 const httpClient = generateHttpClient(fetch, process.env.API_KEY);
 const filename = 'latest.json';
 
-const gistID = process.env.GIST_ID;
-
-const gistClient = new GistClient();
-gistClient.setToken(process.env.GIST_TOKEN);
+const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
 
 // do the thing
 (async () => {
   const manifestMetadata = await getDestinyManifest(httpClient);
 
   const current = manifestMetadata.Response.version;
-  const latest = await gistClient
-    .getOneById(gistID)
-    .then((response: any) => JSON.parse(response.files[filename].content));
 
-  if (!latest) {
-    // we had no "last time" value so nothing to compare to. save current version as a new "last time"
-    await gistClient.update(gistID, {
-      files: {
-        filename: {
-          content: JSON.stringify(current),
-          filename: filename,
-        },
-      },
-    });
-    return; // done for now i guess
+  if (!skipCheck) {
+    console.log(`Latest:  ${latest}`);
+    console.log(`Current: ${current}`);
+    if (latest === current) {
+      // nothing changed. no updates needed.
+      return;
+    }
+    // if you are here, there's a new manifest
+    console.log('New manifest detected');
+
+    writeFileSync(filename, JSON.stringify(current, null, 2) + '\n', 'utf8');
   }
-  console.log(`Latest: ${latest}`);
-  console.log(`Current: ${current}`);
-  if (latest === current) {
-    // nothing changed. no updates needed.
-    return;
-  }
-  // if you are here, there's a new manifest
-  console.log('new manifest!!!! aaaaaAAAAAAAAAAAaaaaaaaaaaaaa!!');
 
-  await gistClient.update(gistID, {
-    files: {
-      filename: {
-        content: JSON.stringify(current),
-        filename: filename,
-      },
-    },
-  });
-
-  const buildMessage = `new manifest build - ${current}`;
+  const buildMessage = `New manifest build - ${current}`;
 
   // if (!/^[.\w-]+$/.test(versionNumber)) { I AM NOT REALLY SURE THIS NEEDS DOING. }
 

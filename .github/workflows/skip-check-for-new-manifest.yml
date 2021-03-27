@@ -1,9 +1,6 @@
-# This workflow runs every five minutes to check for a new manifest
 name: Check for new manifest
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 jobs:
   build:
@@ -27,4 +24,4 @@ jobs:
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           PAT: ${{ secrets.PAT }}
-          SKIP_CHECK: 'false'
+          SKIP_CHECK: 'true'
