@@ -28,3 +28,16 @@ jobs:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           PAT: ${{ secrets.PAT }}
           SKIP_CHECK: 'false'
+
+      - name: Check for new files
+        id: data
+        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
+
+      - name: Commit latest manifest version
+        if: steps.data.outputs.porcelain
+        uses: stefanzweifel/git-auto-commit-action@v4.7.2
+        with:
+          commit_message: new manifest version
+          commit_user_name: D2 Manifest Bot
+          commit_user_email: destinyitemmanager@gmail.com
+          commit_author: D2 Manifest Bot <destinyitemmanager@gmail.com>
