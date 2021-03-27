@@ -1,4 +1,4 @@
-name: Check for new manifest
+name: Check for new manifest (Skip Check - TRUE)
 on:
   workflow_dispatch:
 
