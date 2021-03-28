@@ -9,7 +9,6 @@ import fse from 'fs-extra';
 
 const { writeFileSync } = fse;
 const httpClient = generateHttpClient(fetch, process.env.API_KEY);
-const filename = 'latest.json';
 
 const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
 
@@ -18,6 +17,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
   const manifestMetadata = await getDestinyManifest(httpClient);
 
   const current = manifestMetadata.Response.version;
+  const newREADME = `# d2-manifest-bot\ngithub action for checking for new d2 manifest\n\n# Current Manifest: ${current}`;
 
   if (!skipCheck) {
     console.log(`Latest:  ${latest}`);
@@ -29,7 +29,8 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
     // if you are here, there's a new manifest
     console.log('New manifest detected');
 
-    writeFileSync(filename, JSON.stringify(current, null, 2) + '\n', 'utf8');
+    writeFileSync('latest.json', `${JSON.stringify(current, null, 2)}\n`, 'utf8');
+    writeFileSync('README.md', newREADME, 'utf8');
   }
 
   const buildMessage = `New manifest build - ${current}`;
