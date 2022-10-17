@@ -30,12 +30,16 @@ jobs:
           PAT: ${{ secrets.PAT }}
           SKIP_CHECK: 'false'
 
-      - name: Check for new files
-        id: data
-        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          base: HEAD
+          filters: |
+            any:
+              - '**/*'
 
       - name: Commit latest manifest version
-        if: steps.data.outputs.porcelain
+        if: ${{ steps.filter.outputs.any == 'true' }}
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
           commit_message: new manifest version
