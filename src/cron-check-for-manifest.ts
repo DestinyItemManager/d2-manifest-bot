@@ -4,7 +4,7 @@ import btoa from 'btoa';
 import fetch from 'cross-fetch';
 import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 import { generateHttpClient } from '@d2api/manifest';
-import latest from '../latest.json';
+import latest from '../latest.json' assert { type: 'json' };
 import fse from 'fs-extra';
 
 const { writeFileSync } = fse;
