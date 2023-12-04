@@ -6,58 +6,58 @@ settings:
 
 devDependencies:
   '@d2api/manifest':
-    specifier: ^1.0.1
+    specifier: ^1.0.3
     version: 1.0.3(cross-fetch@3.1.8)(idb-keyval@3.2.0)
   '@types/btoa':
-    specifier: ^1.2.3
+    specifier: ^1.2.5
     version: 1.2.5
   '@types/fs-extra':
-    specifier: ^9.0.9
+    specifier: ^9.0.13
     version: 9.0.13
   '@types/node':
-    specifier: ^14.0.13
+    specifier: ^14.18.63
     version: 14.18.63
   '@typescript-eslint/eslint-plugin':
-    specifier: ^5.40.1
+    specifier: ^5.62.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.55.0)(typescript@4.9.5)
   '@typescript-eslint/parser':
-    specifier: ^5.40.1
+    specifier: ^5.62.0
     version: 5.62.0(eslint@8.55.0)(typescript@4.9.5)
   btoa:
     specifier: ^1.2.1
     version: 1.2.1
   bungie-api-ts:
-    specifier: ^4.2.0
+    specifier: ^4.22.3
     version: 4.22.3
   cross-fetch:
-    specifier: ^3.0.4
+    specifier: ^3.1.8
     version: 3.1.8
   dotenv-cli:
     specifier: ^6.0.0
     version: 6.0.0
   eslint:
-    specifier: ^8.25.0
+    specifier: ^8.55.0
     version: 8.55.0
   eslint-config-prettier:
-    specifier: ^8.5.0
+    specifier: ^8.10.0
     version: 8.10.0(eslint@8.55.0)
   eslint-plugin-import:
-    specifier: ^2.26.0
+    specifier: ^2.29.0
     version: 2.29.0(@typescript-eslint/parser@5.62.0)(eslint@8.55.0)
   fs-extra:
     specifier: ^9.1.0
     version: 9.1.0
   husky:
-    specifier: ^4.2.5
+    specifier: ^4.3.8
     version: 4.3.8
   prettier:
-    specifier: ^2.0.5
+    specifier: ^2.8.8
     version: 2.8.8
   pretty-quick:
-    specifier: ^2.0.1
+    specifier: ^2.0.2
     version: 2.0.2(prettier@2.8.8)
   typescript:
-    specifier: ^4.2.3
+    specifier: ^4.9.5
     version: 4.9.5
 
 packages:
