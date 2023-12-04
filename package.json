@@ -4,7 +4,8 @@
   "repository": "https://github.com/DestinyItemManager/d2-manifest-bot.git",
   "license": "MIT",
   "engines": {
-    "node": ">=16.14.0"
+    "node": ">=16.14.0",
+    "pnpm": ">=8"
   },
   "scripts": {
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
@@ -16,25 +17,25 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "dependencies": {},
   "devDependencies": {
-    "@d2api/manifest": "^1.0.1",
-    "@types/btoa": "^1.2.3",
-    "@types/fs-extra": "^9.0.9",
-    "@types/node": "^14.0.13",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
+    "@d2api/manifest": "^1.0.3",
+    "@types/btoa": "^1.2.5",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^14.18.63",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
     "btoa": "^1.2.1",
-    "bungie-api-ts": "^4.2.0",
-    "cross-fetch": "^3.0.4",
+    "bungie-api-ts": "^4.22.3",
+    "cross-fetch": "^3.1.8",
     "dotenv-cli": "^6.0.0",
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.29.0",
     "fs-extra": "^9.1.0",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "typescript": "^4.2.3"
-  }
+    "husky": "^4.3.8",
+    "prettier": "^2.8.8",
+    "pretty-quick": "^2.0.2",
+    "typescript": "^4.9.5"
+  },
+  "packageManager": "pnpm@8.8.0+sha256.d713a5750e41c3660d1e090608c7f607ad00d1dd5ba9b6552b5f390bf37924e9"
 }
