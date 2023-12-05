@@ -10,9 +10,9 @@ dependencies:
     version: 0.2.1
 
 devDependencies:
-  '@d2api/manifest':
-    specifier: 1.0.3
-    version: 1.0.3(cross-fetch@4.0.0)(idb-keyval@3.2.0)
+  '@d2api/httpclient':
+    specifier: ^0.0.2
+    version: 0.0.2(bungie-api-ts@5.0.0)
   '@types/btoa':
     specifier: ^1.2.5
     version: 1.2.5
@@ -72,15 +72,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@d2api/manifest@1.0.3(cross-fetch@4.0.0)(idb-keyval@3.2.0):
-    resolution: {integrity: sha512-Ceb/I1XYelmhYcvZ53G7ZsmfHt6xqxADDtsvr//EudpG8Lmx7pVj0L1U6WHTgVDkjjOtdTs39fnO9+uFW+tTog==}
+  /@d2api/httpclient@0.0.2(bungie-api-ts@5.0.0):
+    resolution: {integrity: sha512-Cwr/ZJo93Cj4iMXcHm478ljRuoZsXxQ/imyksD9KnKtnX3dUtfJq6vSKcJEJEeCDyl7cOwJvgXBzIGc7F6khQQ==}
     peerDependencies:
-      cross-fetch: ^3.0.4
-      idb-keyval: ^3.2.0
+      bungie-api-ts: ^5.0.0
     dependencies:
-      bungie-api-ts: 4.22.3
-      cross-fetch: 4.0.0
-      idb-keyval: 3.2.0
+      bungie-api-ts: 5.0.0
     dev: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.55.0):
@@ -480,11 +477,6 @@ packages:
     resolution: {integrity: sha512-SB4/MIGlsiVkMcHmT+pSmIPoNDoHg+7cMzmt3Uxt628MTz2487DKSqK/fuhFBrkuqrYv5UCEnACpF4dTFNKc/g==}
     engines: {node: '>= 0.4.0'}
     hasBin: true
-    dev: true
-
-  /bungie-api-ts@4.22.3:
-    resolution: {integrity: sha512-RiloiBQWqcBz6ixIGGDSgakgu9r+VbffL/RmrMZr9rjZtaFJwfsyzAG9qKujN13EtHYQXIn/hCm1AWB+BAPugQ==}
-    engines: {node: '>=13.2.0'}
     dev: true
 
   /bungie-api-ts@5.0.0:
@@ -1162,10 +1154,6 @@ packages:
     resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
-
-  /idb-keyval@3.2.0:
-    resolution: {integrity: sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ==}
     dev: true
 
   /ignore@5.3.0:
