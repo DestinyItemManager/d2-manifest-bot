@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
 import btoa from 'btoa';
-import fetch from 'cross-fetch';
 import { getDestinyManifest } from 'bungie-api-ts/destiny2';
-import { generateHttpClient } from '@d2api/manifest';
+import { createHttpClient } from '@d2api/httpclient';
 import latest from '../latest.json' assert { type: 'json' };
 import fse from 'fs-extra';
 
 const { writeFileSync } = fse;
-const httpClient = generateHttpClient(fetch, process.env.API_KEY);
+const httpClient = createHttpClient(process.env.API_KEY!);
 
 const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
 
