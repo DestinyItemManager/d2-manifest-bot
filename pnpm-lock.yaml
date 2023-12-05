@@ -4,10 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  dlx:
+    specifier: ^0.2.1
+    version: 0.2.1
+
 devDependencies:
   '@d2api/manifest':
-    specifier: ^6.1.0
-    version: 6.1.0(bungie-api-ts@5.0.0)
+    specifier: 1.0.3
+    version: 1.0.3(cross-fetch@4.0.0)(idb-keyval@3.2.0)
   '@types/btoa':
     specifier: ^1.2.5
     version: 1.2.5
@@ -67,12 +72,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@d2api/manifest@6.1.0(bungie-api-ts@5.0.0):
-    resolution: {integrity: sha512-5oW0XlZMEx62bK+SV5FQf5po67W2BGgJOrHGzGC+8Ux8RUu0J5iYAja/RAxcykxKa/tHxUAzecP+uYkyEv238w==}
+  /@d2api/manifest@1.0.3(cross-fetch@4.0.0)(idb-keyval@3.2.0):
+    resolution: {integrity: sha512-Ceb/I1XYelmhYcvZ53G7ZsmfHt6xqxADDtsvr//EudpG8Lmx7pVj0L1U6WHTgVDkjjOtdTs39fnO9+uFW+tTog==}
     peerDependencies:
-      bungie-api-ts: ^5.0.0
+      cross-fetch: ^3.0.4
+      idb-keyval: ^3.2.0
     dependencies:
-      bungie-api-ts: 5.0.0
+      bungie-api-ts: 4.22.3
+      cross-fetch: 4.0.0
+      idb-keyval: 3.2.0
     dev: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.55.0):
@@ -474,6 +482,11 @@ packages:
     hasBin: true
     dev: true
 
+  /bungie-api-ts@4.22.3:
+    resolution: {integrity: sha512-RiloiBQWqcBz6ixIGGDSgakgu9r+VbffL/RmrMZr9rjZtaFJwfsyzAG9qKujN13EtHYQXIn/hCm1AWB+BAPugQ==}
+    engines: {node: '>=13.2.0'}
+    dev: true
+
   /bungie-api-ts@5.0.0:
     resolution: {integrity: sha512-MpEP37GmYN5klyrcpFtFezFqSK4KNmiXx7yqmCV15eJim37w7d7GpjH3jgKe3XP1uruLCmzGbf56q5pRf3ktaQ==}
     engines: {node: '>=13.2.0'}
@@ -591,6 +604,12 @@ packages:
     dependencies:
       path-type: 4.0.0
     dev: true
+
+  /dlx@0.2.1:
+    resolution: {integrity: sha512-oXRVvaKG942UX0HNIDr+Eykp6uGhcjkk719dGBYNqSagrwZ0l4ryA4iTh2n/l23MinmXISqzt4uVLSS2cUYm7A==}
+    dependencies:
+      underscore: 1.13.6
+    dev: false
 
   /doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
@@ -1143,6 +1162,10 @@ packages:
     resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
+
+  /idb-keyval@3.2.0:
+    resolution: {integrity: sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ==}
     dev: true
 
   /ignore@5.3.0:
@@ -1922,6 +1945,10 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /underscore@1.13.6:
+    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
+    dev: false
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
