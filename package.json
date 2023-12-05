@@ -10,7 +10,7 @@
   "scripts": {
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
     "lint": "eslint --fix src --ext .js,.ts,.tsx",
-    "manifest:check": "tsc && dotenv node built/src/cron-check-for-manifest.js"
+    "manifest:check": "tsc && dotenv node built/cron-check-for-manifest.js"
   },
   "husky": {
     "hooks": {
@@ -18,7 +18,8 @@
     }
   },
   "devDependencies": {
-    "@d2api/manifest": "1.0.3",
+    "@d2api/manifest": "^6.1.0",
+    "@d2api/manifest-node": "^2.0.9",
     "@types/btoa": "^1.2.5",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.10.3",

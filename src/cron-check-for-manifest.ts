@@ -2,21 +2,22 @@
 
 import btoa from 'btoa';
 import fetch from 'cross-fetch';
-import { getDestinyManifest } from 'bungie-api-ts/destiny2';
-import { generateHttpClient } from '@d2api/manifest';
+import { load, setApiKey, verbose } from '@d2api/manifest-node';
+import { loadedVersion } from '@d2api/manifest';
 import latest from '../latest.json' assert { type: 'json' };
 import fse from 'fs-extra';
 
 const { writeFileSync } = fse;
-const httpClient = generateHttpClient(fetch, process.env.API_KEY);
+
+verbose();
+setApiKey(process.env.API_KEY);
 
 const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
 
 // do the thing
 (async () => {
-  const manifestMetadata = await getDestinyManifest(httpClient);
-
-  const current = manifestMetadata.Response.version;
+  await load();
+  const current = loadedVersion;
   const newREADME = `# d2-manifest-bot\ngithub action for checking for new d2 manifest\n\n# Current Manifest: ${current}`;
 
   if (!skipCheck) {
