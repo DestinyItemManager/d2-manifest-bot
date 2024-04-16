@@ -1,4 +1,4 @@
 # d2-manifest-bot
 github action for checking for new d2 manifest
 
-# Current Manifest: 224968.24.03.30.1517-1-bnet.54867
+# Current Manifest: 225174.24.04.10.1730-2-bnet.54923
