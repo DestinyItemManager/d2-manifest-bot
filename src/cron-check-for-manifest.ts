@@ -72,7 +72,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
       event_type: 'new-manifest-detected',
       client_payload: {
         message: buildMessage,
-        branch: 'master',
+        branch: 'main',
         config: {
           env: {
             MANIFEST_VERSION: current,
