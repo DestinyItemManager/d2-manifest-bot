@@ -60,7 +60,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
     method: 'POST',
   };
 
-  const buildOptions2 = {
+ /* const buildOptions2 = {
     url: 'https://api.github.com/repos/DestinyItemManager/dim-custom-symbols/dispatches',
     headers: {
       'Content-Type': 'application/json',
@@ -83,20 +83,23 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
     json: true,
     method: 'POST',
   };
+  */
 
   const githubFetch = await fetch(buildOptions.url, buildOptions);
-  const githubFetch2 = await fetch(buildOptions2.url, buildOptions2);
+  //const githubFetch2 = await fetch(buildOptions2.url, buildOptions2);
 
   if (!githubFetch.ok) {
     console.log('Github returned an error');
     console.log(githubFetch);
     process.exit(1);
   }
+  /*
   if (!githubFetch2.ok) {
     console.log('Github returned an error');
     console.log(githubFetch2);
     process.exit(1);
   }
+  */
 })().catch((e) => {
   console.log(e);
   process.exit(1);
