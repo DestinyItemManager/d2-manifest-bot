@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
-import btoa from 'btoa';
 import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 import { createHttpClient } from '@d2api/httpclient';
-import latest from '../latest.json' assert { type: 'json' };
-import fse from 'fs-extra';
+import latest from '../latest.json' with { type: 'json' };
 
-const { writeFileSync } = fse;
+import { writeFileSync } from 'node:fs';
 const httpClient = createHttpClient(process.env.API_KEY!);
 
 const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
@@ -41,7 +39,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: 'Basic ' + btoa(process.env.PAT || ''),
+      Authorization: 'Basic ' + Buffer.from(process.env.PAT || '').toString('base64'),
       'User-Agent': 'd2-additional-info',
     },
     body: JSON.stringify({
@@ -60,7 +58,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
     method: 'POST',
   };
 
- /* const buildOptions2 = {
+  /* const buildOptions2 = {
     url: 'https://api.github.com/repos/DestinyItemManager/dim-custom-symbols/dispatches',
     headers: {
       'Content-Type': 'application/json',
