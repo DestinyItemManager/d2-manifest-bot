@@ -67,13 +67,16 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
         if (!githubFetch.ok) {
           console.log('Github returned an error pinging', repo);
           console.log(githubFetch);
-          process.exit(1);
         }
       })(),
     );
   }
 
-  await Promise.allSettled(promises);
+  const results = await Promise.allSettled(promises);
+  if (results.some((r) => r.status === 'rejected')) {
+    console.log('One or more of the github dispatches failed');
+    process.exit(1);
+  }
 })().catch((e) => {
   console.log(e);
   process.exit(1);
