@@ -67,6 +67,7 @@ const skipCheck = process.env.SKIP_CHECK === 'true' ? true : false;
         if (!githubFetch.ok) {
           console.log('Github returned an error pinging', repo);
           console.log(githubFetch);
+          throw new Error('Github returned an error');
         }
       })(),
     );
