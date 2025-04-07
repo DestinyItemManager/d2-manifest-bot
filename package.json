@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@d2api/httpclient": "^0.0.4",
-    "@types/node": "^22.13.14",
-    "@typescript-eslint/eslint-plugin": "^8.29.0",
-    "@typescript-eslint/parser": "^8.29.0",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
     "bungie-api-ts": "^5.2.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.1",
@@ -29,7 +29,7 @@
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "pretty-quick": "^4.1.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@8.8.0+sha256.d713a5750e41c3660d1e090608c7f607ad00d1dd5ba9b6552b5f390bf37924e9",
   "dependencies": {
