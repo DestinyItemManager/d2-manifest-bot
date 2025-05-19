@@ -14,8 +14,8 @@ devDependencies:
     specifier: ^0.0.4
     version: 0.0.4(bungie-api-ts@5.2.0)
   '@types/node':
-    specifier: ^22.15.17
-    version: 22.15.17
+    specifier: ^22.15.19
+    version: 22.15.19
   '@typescript-eslint/eslint-plugin':
     specifier: ^8.32.1
     version: 8.32.1(@typescript-eslint/parser@8.32.1)(eslint@8.57.1)(typescript@5.8.3)
@@ -160,8 +160,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@22.15.17:
-    resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
+  /@types/node@22.15.19:
+    resolution: {integrity: sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==}
     dependencies:
       undici-types: 6.21.0
     dev: true
