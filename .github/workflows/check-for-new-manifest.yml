@@ -40,7 +40,7 @@ jobs:
 
       - name: Commit latest manifest version
         if: ${{ steps.filter.outputs.any == 'true' }}
-        uses: stefanzweifel/git-auto-commit-action@v5.2.0
+        uses: stefanzweifel/git-auto-commit-action@v6.0.1
         with:
           commit_message: new manifest version
           commit_user_name: D2 Manifest Bot
