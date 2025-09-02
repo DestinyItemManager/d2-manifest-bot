@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@d2api/httpclient':
     specifier: ^0.0.4
-    version: 0.0.4(bungie-api-ts@5.6.0)
+    version: 0.0.4(bungie-api-ts@5.7.0)
   '@types/node':
     specifier: ^24.3.0
     version: 24.3.0
@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^8.41.0
     version: 8.41.0(eslint@8.57.1)(typescript@5.9.2)
   bungie-api-ts:
-    specifier: ^5.6.0
-    version: 5.6.0
+    specifier: ^5.7.0
+    version: 5.7.0
   eslint:
     specifier: ^8.57.1
     version: 8.57.1
@@ -49,12 +49,12 @@ devDependencies:
 
 packages:
 
-  /@d2api/httpclient@0.0.4(bungie-api-ts@5.6.0):
+  /@d2api/httpclient@0.0.4(bungie-api-ts@5.7.0):
     resolution: {integrity: sha512-Q5vb0YyBQbul3lfXkwOW6TQLMVM3loK5mTvBlSer9OUoZ/1e77Dk3HgpG47yNb+Cl9sLgccgSC44eIp2K5V7Ww==}
     peerDependencies:
       bungie-api-ts: ^5.0.0
     dependencies:
-      bungie-api-ts: 5.6.0
+      bungie-api-ts: 5.7.0
     dev: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.57.1):
@@ -460,8 +460,8 @@ packages:
       fill-range: 7.1.1
     dev: true
 
-  /bungie-api-ts@5.6.0:
-    resolution: {integrity: sha512-lF05sytEKXHCU3DVQumvKtUelGJdrsMpqk+uw6+rmiVWC4ZOdaN636KiWWLj7sD238qVqoHPQ+jQWdWBWMawBQ==}
+  /bungie-api-ts@5.7.0:
+    resolution: {integrity: sha512-ev+NPfOqUkk9aVvrpYXamAgpDyg5Jl9/e2RJhZIsTTNYBCbupF6+cLGSqef0LwVTSBIjLuIU7wiNOOGUx+mqrQ==}
     engines: {node: '>=13.2.0'}
     dev: true
 
