@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@d2api/httpclient": "^0.0.4",
-    "@types/node": "^24.7.2",
-    "@typescript-eslint/eslint-plugin": "^8.46.1",
-    "@typescript-eslint/parser": "^8.46.1",
+    "@types/node": "^24.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "bungie-api-ts": "^5.9.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
