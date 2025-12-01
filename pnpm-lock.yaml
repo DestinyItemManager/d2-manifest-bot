@@ -38,11 +38,11 @@ devDependencies:
     specifier: ^9.1.7
     version: 9.1.7
   prettier:
-    specifier: ^3.6.2
-    version: 3.6.2
+    specifier: ^3.7.3
+    version: 3.7.3
   pretty-quick:
     specifier: ^4.2.2
-    version: 4.2.2(prettier@3.6.2)
+    version: 4.2.2(prettier@3.7.3)
   typescript:
     specifier: ^5.9.3
     version: 5.9.3
@@ -1599,13 +1599,13 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier@3.6.2:
-    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+  /prettier@3.7.3:
+    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /pretty-quick@4.2.2(prettier@3.6.2):
+  /pretty-quick@4.2.2(prettier@3.7.3):
     resolution: {integrity: sha512-uAh96tBW1SsD34VhhDmWuEmqbpfYc/B3j++5MC/6b3Cb8Ow7NJsvKFhg0eoGu2xXX+o9RkahkTK6sUdd8E7g5w==}
     engines: {node: '>=14'}
     hasBin: true
@@ -1617,7 +1617,7 @@ packages:
       mri: 1.2.0
       picocolors: 1.1.1
       picomatch: 4.0.2
-      prettier: 3.6.2
+      prettier: 3.7.3
       tinyexec: 0.3.2
       tslib: 2.8.1
     dev: true
