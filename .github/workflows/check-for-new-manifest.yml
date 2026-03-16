@@ -30,7 +30,7 @@ jobs:
           PAT: ${{ secrets.PAT }}
           SKIP_CHECK: 'false'
 
-      - uses: dorny/paths-filter@v3
+      - uses: dorny/paths-filter@v4
         id: filter
         with:
           base: HEAD
