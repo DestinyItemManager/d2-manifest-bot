@@ -557,7 +557,7 @@ packages:
   /dlx@0.2.1:
     resolution: {integrity: sha512-oXRVvaKG942UX0HNIDr+Eykp6uGhcjkk719dGBYNqSagrwZ0l4ryA4iTh2n/l23MinmXISqzt4uVLSS2cUYm7A==}
     dependencies:
-      underscore: 1.13.6
+      underscore: 1.13.8
     dev: false
 
   /doctrine@2.1.0:
@@ -1786,8 +1786,8 @@ packages:
       which-boxed-primitive: 1.1.1
     dev: true
 
-  /underscore@1.13.6:
-    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
+  /underscore@1.13.8:
+    resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
     dev: false
 
   /undici-types@7.24.6:
