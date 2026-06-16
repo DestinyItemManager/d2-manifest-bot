@@ -7,8 +7,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "lib": ["ES2020", "DOM"],
-    "target": "ESnext",
-    "module": "ESnext",
+    "target": "ES2020",
+    "module": "nodenext",
     "typeRoots": ["./types", "./node_modules/@types"]
   },
   "include": ["./src/**/*"]
