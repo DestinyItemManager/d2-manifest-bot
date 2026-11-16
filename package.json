@@ -20,14 +20,14 @@
   "devDependencies": {
     "@d2api/httpclient": "^0.0.4",
     "@types/node": "^26.6.6",
-    "@typescript-eslint/eslint-plugin": "^8.72.1",
-    "@typescript-eslint/parser": "^8.72.1",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
     "bungie-api-ts": "^5.10.0",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "husky": "^9.1.7",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "pretty-quick": "^4.2.2",
     "typescript": "^7.0.2"
   },
